@@ -31,6 +31,7 @@ module.exports = async m => {
     if (cmd === 'button') return m.channel.send('**Klik tombol dibawah ini untuk melaporkan sesuatu atau meminta bantuan staff**',
         new MessageButton()
             .setStyle('blurple')
+            .setEmoji('✉️')
             .setLabel('Minta Bantuan Staff')
             .setID('Ticket'))
     if (cmd === 'timezone') {

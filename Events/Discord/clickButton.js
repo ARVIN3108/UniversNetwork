@@ -3,7 +3,7 @@ module.exports = async (b) => {
 
      /*Must have this function if not you will get error
       *to get user id or tag from buttom for
-      *discord-button ^2.4.1 or later
+      *NPM discord-button ^2.4.1 or later
       */
     await b.clicker.fetch();
 

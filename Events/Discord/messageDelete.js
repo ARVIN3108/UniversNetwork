@@ -21,6 +21,7 @@ module.exports = async m => {
                 buttons: [new MessageButton()
                     .setID('Lock')
                     .setStyle('red')
+                    .setEmoji('🔒')
                     .setLabel('Tutup Ticket')],
                 embed: new MessageEmbed()
                     .setColor('RANDOM')
@@ -44,10 +45,12 @@ module.exports = async m => {
                 buttons: [new MessageButton()
                     .setID('No')
                     .setStyle('red')
+                    .setEmoji('❌')
                     .setLabel('Tidak'),
                 new MessageButton()
                     .setID('Yes')
                     .setStyle('green')
+                    .setEmoji('✔️')
                     .setLabel('Ya')],
                 embed: new MessageEmbed()
                     .setColor('RANDOM')
@@ -71,10 +74,12 @@ module.exports = async m => {
                 buttons: [new MessageButton()
                     .setID('Unlock')
                     .setStyle('blurple')
+                    .setEmoji('🔓')
                     .setLabel('Buka Tiket Kembali'),
                 new MessageButton()
                     .setID('Delete')
                     .setStyle('red')
+                    .setEmoji('🗑️')
                     .setLabel('Hapus Tiket')],
                 embed: new MessageEmbed()
                     .setColor('RANDOM')
@@ -98,10 +103,12 @@ module.exports = async m => {
                 buttons: [new MessageButton()
                     .setID('No')
                     .setStyle('red')
+                    .setEmoji('❌')
                     .setLabel('Tidak'),
                 new MessageButton()
                     .setID('Yes')
                     .setStyle('green')
+                    .setEmoji('✔️')
                     .setLabel('Ya')],
                 embed: new MessageEmbed()
                     .setColor('RANDOM')
@@ -125,10 +132,12 @@ module.exports = async m => {
                 buttons: [new MessageButton()
                     .setID('No')
                     .setStyle('red')
+                    .setEmoji('❌')
                     .setLabel('Tidak'),
                 new MessageButton()
                     .setID('Yes')
                     .setStyle('green')
+                    .setEmoji('✔️')
                     .setLabel('Ya')],
                 embed: new MessageEmbed()
                     .setColor('RANDOM')
@@ -155,10 +164,12 @@ module.exports = async m => {
                 buttons: [new MessageButton()
                     .setID('No')
                     .setStyle('red')
+                    .setEmoji('❌')
                     .setLabel('Tidak'),
                 new MessageButton()
                     .setID('Yes')
                     .setStyle('green')
+                    .setEmoji('✔️')
                     .setLabel('Ya')],
                 embed: new MessageEmbed()
                     .setColor('RANDOM')
@@ -180,6 +191,7 @@ module.exports = async m => {
                 buttons: [new MessageButton()
                     .setID('Delete')
                     .setStyle('red')
+                    .setEmoji('🗳️')
                     .setLabel('Hapus Transcript')],
                 embed: new MessageEmbed()
                     .setColor('RANDOM')

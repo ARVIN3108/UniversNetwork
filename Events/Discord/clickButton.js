@@ -4,6 +4,7 @@ module.exports = async (b) => {
      /*Must have this function if not you will get error
       *to get user id or tag from button for
       *NPM discord-button ^2.4.1 or later
+      *For More Information: https://discord.com/channels/748098690874474567/756494479778906225/853604515176513548
       */
     await b.clicker.fetch();
 

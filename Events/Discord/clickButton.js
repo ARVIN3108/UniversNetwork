@@ -56,7 +56,7 @@ module.exports = async (b) => {
                 ]
             }).then(channel => {
                 channel.send(`<@${b.clicker.user.id}>, Selamat Datang Di Tiketmu!`, {
-                    component: [new MessageButton()
+                    buttons: [new MessageButton()
                         .setID('Lock')
                         .setStyle('red')
                         .setEmoji('🔒')
@@ -77,10 +77,10 @@ module.exports = async (b) => {
                             Status: 0
                         }).save();
                         transcript.send({
-                            component: [new MessageButton()
+                            buttons: [new MessageButton()
                                 .setStyle('red')
                                 .setLabel('Hapus Transcript')
-                                .setEmoji('🗳️')
+                                .setEmoji('⛔️')
                                 .setID('Delete')],
                             embed: new MessageEmbed()
                                 .setColor('RANDOM')
@@ -108,14 +108,14 @@ module.exports = async (b) => {
         if (b.id === 'Lock') {
             if (data.Status === 0) {
                 b.message.edit({
-                    components: [new MessageButton()
+                    buttons: [new MessageButton()
                         .setID('No')
                         .setStyle('red')
                         .setEmoji('❌')
                         .setLabel('Tidak'),
                     new MessageButton()
                         .setID('Yes')
-                        .setEmoji('✔️')
+                        .setEmoji('✅')
                         .setStyle('green')
                         .setLabel('Ya')],
                     embed: new MessageEmbed()
@@ -138,7 +138,7 @@ module.exports = async (b) => {
         } else if (b.id === 'No') {
             if (data.Status === 1) {
                 b.message.edit({
-                    component: [new MessageButton()
+                    buttons: [new MessageButton()
                         .setID('Lock')
                         .setStyle('red')
                         .setEmoji('🗃️')
@@ -156,7 +156,7 @@ module.exports = async (b) => {
                 });
             } else if (data.Status === 3 || data.Status === 4) {
                 b.message.edit({
-                   components: [new MessageButton()
+                   buttons: [new MessageButton()
                         .setID('Unlock')
                         .setStyle('blurple')
                         .setEmoji('🔓')
@@ -188,7 +188,7 @@ module.exports = async (b) => {
                 b.channel.updateOverwrite(data.User, { 'VIEW_CHANNEL': false });
                 await b.channel.setName(`📜┊${b.client.users.cache.get(data.User).username}┊❌`);
                 b.message.edit({
-                    components: [new MessageButton()
+                    buttons: [new MessageButton()
                         .setID('Unlock')
                         .setStyle('blurple')
                         .setEmoji('🔓')
@@ -219,7 +219,7 @@ module.exports = async (b) => {
                 b.channel.updateOverwrite(data.User, { 'VIEW_CHANNEL': true });
                 awaitb.channel.setName(`📜┊${b.client.users.cache.get(data.User).username}┊✅`);
                 b.message.edit({
-                    component: [new MessageButton()
+                    buttons: [new MessageButton()
                         .setID('Lock')
                         .setStyle('red')
                         .setEmoji('🔒')
@@ -247,7 +247,7 @@ module.exports = async (b) => {
         } else if (b.id === 'Unlock') {
             if (data.Status === 2) {
                 b.message.edit({
-                    components: [new MessageButton()
+                    buttons: [new MessageButton()
                         .setID('No')
                         .setStyle('red')
                         .setEmoji('❌')
@@ -255,7 +255,7 @@ module.exports = async (b) => {
                     new MessageButton()
                         .setID('Yes')
                         .setStyle('green')
-                        .setEmoji('✔️')
+                        .setEmoji('✅')
                         .setLabel('Ya')],
                     embed: new MessageEmbed()
                         .setColor('RANDOM')
@@ -276,7 +276,7 @@ module.exports = async (b) => {
         } else if (b.id === 'Delete') {
             if (data.Status === 2) {
                 b.message.edit({
-                    components: [new MessageButton()
+                    buttons: [new MessageButton()
                         .setID('No')
                         .setStyle('red')
                         .setEmoji('❌')
@@ -284,7 +284,7 @@ module.exports = async (b) => {
                     new MessageButton()
                         .setID('Yes')
                         .setStyle('green')
-                        .setEmoji('✔️')
+                        .setEmoji('✅')
                         .setLabel('Ya')],
                     embed: new MessageEmbed()
                         .setColor('RANDOM')
@@ -309,7 +309,7 @@ module.exports = async (b) => {
         if (b.id === 'Delete') {
             if (transcript.Status === 0) {
                 b.message.edit({
-                    components: [new MessageButton()
+                    buttons: [new MessageButton()
                         .setID('No')
                         .setStyle('red')
                         .setEmoji('❌')
@@ -317,7 +317,7 @@ module.exports = async (b) => {
                     new MessageButton()
                         .setID('Yes')
                         .setStyle('green')
-                        .setEmoji('✔️')
+                        .setEmoji('✅')
                         .setLabel('Ya')],
                     embed: new MessageEmbed()
                         .setColor('RANDOM')
@@ -337,10 +337,10 @@ module.exports = async (b) => {
         } else if (b.id === 'No') {
             if (transcript.Status === 1) {
                 b.message.edit({
-                    component: [new MessageButton()
+                    buttons: [new MessageButton()
                         .setID('Delete')
                         .setStyle('red')
-                        .setEmoji('🗳️')
+                        .setEmoji('⛔️')
                         .setLabel('Hapus Transcript')],
                     embed: new MessageEmbed()
                         .setColor('RANDOM')

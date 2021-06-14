@@ -28,11 +28,13 @@ module.exports = async m => {
     if (!m.content.startsWith(Prefix) || m.author.dmChannel) return;
     if (await require('../../Functions/Handlers').blacklisted.channel(m) === true) return m.delete().then(m.channel.send(':x: **Kamu Tidak Bisa Menggunakan Bot Di Channel Ini!**').then(m => m.delete({ timeout: 3000 })));
     if (command && cmd !== 'youtube' && cmd !== 'yt' && command && m.author.id !== '700166055326384179') return;
-    if (cmd === 'button') return m.channel.send('**Klik tombol dibawah ini untuk melaporkan sesuatu atau meminta bantuan staff**',
-        new MessageButton()
+    if (cmd === 'button') return m.channel.send('**Klik tombol dibawah ini untuk melaporkan sesuatu atau meminta bantuan staff**',{
+        component: new MessageButton()
             .setStyle('blurple')
+            .setEmoji('📩')
             .setLabel('Minta Bantuan Staff')
-            .setID('Ticket'))
+            .setID('Ticket')
+     })
     if (cmd === 'timezone') {
         m.delete()
         console.log(t().tz('Asia/Jakarta').format('HH:mm'))

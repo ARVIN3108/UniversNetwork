@@ -17,7 +17,7 @@
     "canvas": "^2.8.0",
     "child_process": "^1.0.2",
     "datejs": "^1.0.0-rc3",
-    "discord-buttons": "^2.4.1",
+    "discord-buttons": "^3.2.1",
     "discord-reply": "0.0.9",
     "discord-slash-commands": "github:ShadeDevelopment/discord-slash-commands",
     "discord.js": "^12.5.3",

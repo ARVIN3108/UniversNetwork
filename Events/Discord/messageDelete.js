@@ -18,7 +18,7 @@ module.exports = async m => {
         if (!ticket) return;
         if (ticket.Status === 0) {
             m.channel.send(`<@${ticket.User}>, Selamat Datang Di Tiketmu!`, {
-                component: [new MessageButton()
+                buttons: [new MessageButton()
                     .setID('Lock')
                     .setStyle('red')
                     .setEmoji('🔒')
@@ -42,7 +42,7 @@ module.exports = async m => {
             })
         } else if (ticket.Status === 1) {
             m.channel.send(`<@${ticket.User}>, Selamat Datang Di Tiketmu!`, {
-                components: [new MessageButton()
+                buttons: [new MessageButton()
                     .setID('No')
                     .setStyle('red')
                     .setEmoji('❌')
@@ -50,7 +50,7 @@ module.exports = async m => {
                 new MessageButton()
                     .setID('Yes')
                     .setStyle('green')
-                    .setEmoji('✔️')
+                    .setEmoji('✅')
                     .setLabel('Ya')],
                 embed: new MessageEmbed()
                     .setColor('RANDOM')
@@ -71,7 +71,7 @@ module.exports = async m => {
             })
         } else if (ticket.Status === 2) {
             m.channel.send(`<@${ticket.User}>, Selamat Datang Di Tiketmu!`, {
-                components: [new MessageButton()
+                buttons: [new MessageButton()
                     .setID('Unlock')
                     .setStyle('blurple')
                     .setEmoji('🔓')
@@ -100,7 +100,7 @@ module.exports = async m => {
             })
         } else if (ticket.Status === 3) {
             m.channel.send(`<@${ticket.User}>, Selamat Datang Di Tiketmu!`, {
-                components: [new MessageButton()
+                buttons: [new MessageButton()
                     .setID('No')
                     .setStyle('red')
                     .setEmoji('❌')
@@ -108,7 +108,7 @@ module.exports = async m => {
                 new MessageButton()
                     .setID('Yes')
                     .setStyle('green')
-                    .setEmoji('✔️')
+                    .setEmoji('✅')
                     .setLabel('Ya')],
                 embed: new MessageEmbed()
                     .setColor('RANDOM')
@@ -129,7 +129,7 @@ module.exports = async m => {
             })
         } else if (ticket.Status === 4) {
             m.channel.send(`<@${ticket.User}>, Selamat Datang Di Tiketmu!`, {
-                components: [new MessageButton()
+                buttons: [new MessageButton()
                     .setID('No')
                     .setStyle('red')
                     .setEmoji('❌')
@@ -137,7 +137,7 @@ module.exports = async m => {
                 new MessageButton()
                     .setID('Yes')
                     .setStyle('green')
-                    .setEmoji('✔️')
+                    .setEmoji('✅')
                     .setLabel('Ya')],
                 embed: new MessageEmbed()
                     .setColor('RANDOM')
@@ -161,7 +161,7 @@ module.exports = async m => {
         if (!transcript) return;
         if (transcript.Status === 0) {
             m.channel.send({
-                components: [new MessageButton()
+                buttons: [new MessageButton()
                     .setID('No')
                     .setStyle('red')
                     .setEmoji('❌')
@@ -169,7 +169,7 @@ module.exports = async m => {
                 new MessageButton()
                     .setID('Yes')
                     .setStyle('green')
-                    .setEmoji('✔️')
+                    .setEmoji('✅')
                     .setLabel('Ya')],
                 embed: new MessageEmbed()
                     .setColor('RANDOM')
@@ -188,10 +188,10 @@ module.exports = async m => {
             })
         } else if (transcript.Status === 1) {
             m.channel.send({
-                component: [new MessageButton()
+                buttons: [new MessageButton()
                     .setID('Delete')
                     .setStyle('red')
-                    .setEmoji('🗳️')
+                    .setEmoji('⛔️')
                     .setLabel('Hapus Transcript')],
                 embed: new MessageEmbed()
                     .setColor('RANDOM')
